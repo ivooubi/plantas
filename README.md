@@ -24,6 +24,9 @@
     .animate-fadeIn {
       animation: fadeIn 0.3s ease-in-out;
     }
+    .title-shadow {
+      text-shadow: 0 2px 4px rgba(0, 255, 128, 0.2);
+    }
   </style>
 </head>
 <body class="bg-black text-white">
@@ -343,8 +346,8 @@
           <div className="flex flex-col items-center justify-center min-h-screen bg-black p-4">
             {!quizFinished ? (
               <div className="bg-gray-900 p-6 rounded-lg shadow-lg w-full max-w-md animate-fadeIn">
-                <h1 className="text-2xl font-bold text-green-500 mb-4">
-                  {isSecretMode ? 'Tarxetas Secretas: As Plantas' : 'Tarxetas: As Plantas'}
+                <h1 className="text-3xl font-bold text-white uppercase mb-4 title-shadow">
+                  PLANTAS 🌱
                 </h1>
                 <p className="text-lg text-white mb-4">Pregunta {currentCard + 1} de {currentFlashcards.length}</p>
                 <p className="text-xl text-white mb-6">{currentFlashcards[currentCard].question}</p>
@@ -382,11 +385,14 @@
               </div>
             ) : (
               <div className="bg-gray-900 p-6 rounded-lg shadow-lg w-full max-w-md text-center animate-fadeIn">
-                <h1 className="text-2xl font-bold text-green-500 mb-4">
-                  {isSecretMode && calculateGrade() >= 9.0 ? 'Gañaches o xogo!' : 'Cuestionario Completado!'}
+                <h1 className="text-3xl font-bold text-white uppercase mb-4 title-shadow">
+                  PLANTAS 🌱
                 </h1>
+                <h2 className="text-2xl font-bold text-green-500 mb-4">
+                  {isSecretMode && calculateGrade() >= 9.0 ? 'Gañaches o xogo!' : 'Cuestionario Completado!'}
+                </h2>
                 {!isSecretMode && calculateGrade() >= 9.0 && (
-                  <h2 className="text-4xl font-bold text-green-500 mb-4">Eres un crack!</h2>
+                  <h3 className="text-4xl font-bold text-green-500 mb-4">Eres un crack!</h3>
                 )}
                 <p className="text-lg text-white mb-4">
                   Acertaches {score} de {currentFlashcards.length} preguntas.
@@ -427,4 +433,4 @@
     }
   </script>
 </body>
-</html># plantas
+</html>
