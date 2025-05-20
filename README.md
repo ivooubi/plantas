@@ -16,6 +16,8 @@
   <style>
     body { 
       font-family: 'Montserrat', sans-serif; 
+      margin: 0; /* Eliminar márgenes predeterminados */
+      padding: 0; /* Eliminar rellenos predeterminados */
     }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(10px); }
