@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="gl">
 <head>
   <meta charset="UTF-8">
@@ -349,7 +348,7 @@
             {!quizFinished ? (
               <div className="bg-gray-900 p-6 rounded-lg shadow-lg w-full max-w-md animate-fadeIn">
                 <h1 className="text-3xl font-bold text-white uppercase mb-4 title-shadow">
-                  PLANTAS 🌱
+                  🌱
                 </h1>
                 <p className="text-lg text-white mb-4">Pregunta {currentCard + 1} de {currentFlashcards.length}</p>
                 <p className="text-xl text-white mb-6">{currentFlashcards[currentCard].question}</p>
@@ -376,6 +375,7 @@
                     <p className={isCorrect ? 'text-green-500' : 'text-red-500'}>
                       {isCorrect ? 'Correcto!' : 'Incorrecto. A resposta correcta é: ' + currentFlashcards[currentCard].options[currentFlashcards[currentCard].correct]}
                     </p>
+                    <p className="text-sm text-gray-400 mt-2">Índice da resposta correcta: {currentFlashcards[currentCard].correct}</p>
                     <button
                       className="mt-4 bg-green-500 text-white p-3 rounded-lg hover:brightness-110 hover:-translate-y-1 transition-all duration-200 ease-in-out"
                       onClick={nextCard}
@@ -388,7 +388,7 @@
             ) : (
               <div className="bg-gray-900 p-6 rounded-lg shadow-lg w-full max-w-md text-center animate-fadeIn">
                 <h1 className="text-3xl font-bold text-white uppercase mb-4 title-shadow">
-                  PLANTAS 🌱
+                  🌱
                 </h1>
                 <h2 className="text-2xl font-bold text-green-500 mb-4">
                   {isSecretMode && calculateGrade() >= 9.0 ? 'Gañaches o xogo!' : 'Cuestionario Completado!'}
